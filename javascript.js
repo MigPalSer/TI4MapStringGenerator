@@ -1,5 +1,8 @@
-$(document).ready(function(){
-    $("#6p").click(function(){
-        $("template1").removeClass("hidden").addClass("visible");
+$(function(){
+    $('input[type="radio"]').click(function(){
+      if ($("#6p").is(':checked'))
+      {
+        $("#template-1").removeClass("hidden");
+      }
     });
-});
+  });
