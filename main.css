@@ -1,4 +1,4 @@
-[type=radio]{
+.hiddenradio{
     position: absolute;
     opacity: 0;
     width: 0;
@@ -15,8 +15,4 @@
 
 .hidden{
     visibility: hidden;
-}
-
-.visible{
-    visibility: visible;
 }
