@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>TI4 Map String Generator</title>
-    </head>
 
-    <body>
-        Players
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>TI4 Map String Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+    <form id="ti-form">
+        <label for="radio" id="n-players">Number of players:
+            <div class="row">
+                <div class="col-xs-1"><label>
+                        <input type="radio" name="players" value="2" id="2p"><img src="assets/players/2.png"
+                            class="img-responsive">
+                    </label></div>
+
+                <div class="col-xs-1"><label>
+                        <input type="radio" name="players" value="3" id="3p"><img src="assets/players/3.png"
+                            class="img-responsive">
+                    </label></div>
+
+                <div class="col-xs-1"><label>
+
+                        <input type="radio" name="players" value="4" id="4p"><img src="assets/players/4.png"
+                            class="img-responsive">
+                    </label></div>
+
+                <div class="col-xs-1"><label>
+
+                        <input type="radio" name="players" value="5" id="5p"><img src="assets/players/5.png"
+                            class="img-responsive">
+                    </label></div>
+
+                <div class="col-xs-1"><label>
+
+
+                        <input type="radio" name="players" value="6" id="6p"><img src="assets/players/6.png"
+                            class="img-responsive">
+                    </label></div>
+
+                <div class="col-xs-1"><label>
+
+                        <input type="radio" name="players" value="7" id="7p"><img src="assets/players/7.png"
+                            class="img-responsive">
+                    </label></div>
+
+                <div class="col-xs-1"><label>
+
+                        <input type="radio" name="players" value="8" id="8p"><img src="assets/players/8.png"
+                            class="img-responsive">
+                    </label></div>
+            </div>
+
+        </label>
+
+        <label for="radio" id="map-templates">Template:
+            <div class="row">
+                <div class="col-xs-3">
+                    <label>
+                        <input type="radio" name="templates" value="template1" id="template1"><img src="assets/templates/nucleus.png" class="img-responsive">
+                    </label>
+                </div>
+            </div>
+        </label> 
+
+    </form>
+</body>
+
 </html>
