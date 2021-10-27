@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $('input[type="radio"]').click(function(){
       if ($("#6p").is(':checked'))
@@ -13,10 +14,11 @@ $(document).ready(function(){
     });
   });
 
-var mydata = require('./assets/templates.json');
-console.log(mydata.R6Nucleus.Size);
 
-solve(mydata[string])
+//var mydata = require('./assets/templates.json');
+//console.log(mydata.R6Nucleus.Size);
+
+//solve(mydata[string])
 
 function objectToMap(obj){
     let keys=Object.keys(obj);
@@ -40,14 +42,11 @@ function keeganString(map){
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
-    // While there remain elements to shuffle...
     while (currentIndex != 0) {
   
-      // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
   
-      // And swap it with the current element.
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
@@ -68,7 +67,9 @@ let map=objectToMap(template);
 
 let R, B, B1, B2, B3;
 
-let providers = require('./assets/providers.json');
+let providers = $.getJSON('./assets/providers.json', function(data){
+    return data;
+});
 
 R=providers.R;
 
@@ -115,8 +116,8 @@ if(value=="R"){
 return map;
 
 }
-let testmap=solve(mydata.R6Nucleus);
-console.log(keeganString(testmap));
+/*let testmap=solve(mydata.R6Nucleus);
+console.log(keeganString(testmap));*/
 
 function generateString(e){
     let myString="";
@@ -135,10 +136,14 @@ function generateString(e){
     if($("#template1").is(':checked')){
         myString+="6Nucleus"
     }
-    var mydata2 = JSON.parse(templates);
 
-    let map=solve(mydata2[myString]);
-    alert(keeganString(map));
+    alert("2h");
+    var mydata2 = $.getJSON('./assets/templates.json', function(data){
+        return data;
+    });
+    alert(mydata2);
+    //let map=solve(mydata2[myString]);
+    alert(keeganString(solve(mydata2)));
     document.getElementById("finalString").innerHTML=myString;
 
 
