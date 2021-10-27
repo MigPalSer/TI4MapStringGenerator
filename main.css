@@ -4,7 +4,7 @@ body{
     font-size: 1.5em;
 }
 
-form{
+.white-rectangle{
     background-color: white;
     margin-left: 7vw;
     margin-top: 1vw;
@@ -37,4 +37,12 @@ form{
 
 .col-md-1{
     width: 14.285714285714285714285714285714%;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: white;
 }

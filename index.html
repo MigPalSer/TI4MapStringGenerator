@@ -15,11 +15,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="javascript.js"></script>
     <script type="text/javascript" src="./assets/templates.json"></script>
+    <script type="text/javascript" src="./assets/providers.json"></script>
+
 </head>
 
 <body>
     <div class="container-fluid">
-    <form id="ti-form" name="ti-form" class="col-xs-10">
+    <form id="ti-form" name="ti-form" class="col-xs-10 white-rectangle">
         <label for="radio" id="n-players">Number of players:
             <div class="row seven-cols">
                 <div class="col-md-1"><label>
@@ -79,20 +81,26 @@
 
         <label id="map-type">Type of map:
             <div class="row">
-                <div class="col-xs-6">
+                <div class="col-xs-4">
                     <label>
-                        <button class="btn btn-primary" name="maptypes" value="random" id="random" disabled>Random
+                        <button type="button" class="btn btn-primary" name="maptypes" value="random" id="random" onclick="generateString(this)" disabled>Random
                     </label>
                 </div>
 
-                <div class="col-xs-6">
+                <div class="col-xs-4">
                     <label>
-                        <button class="btn btn-primary" name="maptypes" value="balanced" id="balanced" disabled>Balanced
+                        <button type="button" class="btn btn-primary" name="maptypes" value="balanced" id="balanced" onclick="generateString(this)" disabled>Balanced
+                    </label>
+                </div>
+
+                <div class="col-xs-4">
+                    <label>
+                        <button type="button" class="btn btn-primary" name="maptypes" value="conflictive" id="conflictive" onclick="generateString(this)" disabled>Conflictive
                     </label>
                 </div>
             </div>
         </label>
-
+        <div id="finalString">This is your string</div>
     </form>
 </div>
 </body>
