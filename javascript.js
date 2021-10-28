@@ -1,3 +1,5 @@
+var templates;
+var providers;
 
 $(document).ready(function(){
     $('input[type="radio"]').click(function(){
@@ -12,13 +14,25 @@ $(document).ready(function(){
 
       }
     });
+    templates=readJson('./assets/templates.json');
+    providers=readJson('./assets/providers.json');
   });
 
 
-//var mydata = require('./assets/templates.json');
-//console.log(mydata.R6Nucleus.Size);
-
-//solve(mydata[string])
+ function readJson(url){
+    let obj=[];
+    //const response= 
+    fetch(url).then(response=> response.json()).then(data=> obj.push(data)); //.then(data => console.log(data));
+    //const obj= response.items;
+    //console.log("a ver el obj");
+    //console.log(obj);
+    //obj.forEach(console.log);
+    //let eing=JSON.parse(obj);
+    //console.log(eing);
+    //return fetch(url).then(response=>{return response.json()});
+    //return JSON.parse(fetch(url).then(response=>{return response.json()}));
+    return obj;
+}
 
 function objectToMap(obj){
     let keys=Object.keys(obj);
@@ -65,11 +79,11 @@ function solve(template){
 
 let map=objectToMap(template);
 
-let R, B, B1, B2, B3;
+let R=[], B=[], B1=[], B2=[], B3=[];
 
-let providers = $.getJSON('./assets/providers.json', function(data){
-    return data;
-});
+//let providers = readJson('./assets/providers.json');
+
+providers=providers[0];
 
 R=providers.R;
 
@@ -137,13 +151,21 @@ function generateString(e){
         myString+="6Nucleus"
     }
 
-    alert("2h");
-    var mydata2 = $.getJSON('./assets/templates.json', function(data){
-        return data;
-    });
-    alert(mydata2);
-    //let map=solve(mydata2[myString]);
-    alert(keeganString(solve(mydata2)));
+    //alert("2h");
+    //let mydata2 = readJson('./assets/templates.json');
+    //console.log(mydata2);
+    //console.log(mydata2[0]);
+
+    console.log(templates);
+    //console.log(providers);
+    //console.log(templates["R6Nucleus"]);
+    console.log(templates[0]);
+    //console.log(templates[0].R6Nucleus);
+
+    let map=solve(templates[0].R6Nucleus);
+    console.log(map);
+    //alert("fin ejecucion");
+    alert(keeganString(map));
     document.getElementById("finalString").innerHTML=myString;
 
 
