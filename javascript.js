@@ -142,8 +142,7 @@ function generateString(e){
     let tempmap=objectToMap(templates[0]);
     let map=solve(tempmap.get(myString));
     console.log(map);
-    alert(keeganString(map));
-    document.getElementById("finalString").innerHTML=myString;
+    document.getElementById("finalString").innerHTML=keeganString(map);
 
 
 }

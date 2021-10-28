@@ -22,88 +22,95 @@
 
 <body>
     <div class="container-fluid">
-    <form id="ti-form" name="ti-form" class="col-xs-10 white-rectangle">
-        <label for="radio" id="n-players">Number of players:
-            <div class="row seven-cols">
-                <div class="col-md-1"><label>
-                        <input type="radio" name="players" value="2" id="2p" class="hiddenradio players"><img src="assets/players/2.png"
-                            class="img-responsive">
-                    </label></div>
+        <form id="ti-form" name="ti-form" class="col-xs-10 white-rectangle">
+            <label for="radio" id="n-players">Number of players:
+                <div class="row seven-cols">
+                    <div class="col-md-1"><label>
+                            <input type="radio" name="players" value="2" id="2p" class="hiddenradio players"><img
+                                src="assets/players/2.png" class="img-responsive">
+                        </label></div>
 
-                <div class="col-md-1"><label>
-                        <input type="radio" name="players" value="3" id="3p" class="hiddenradio players"><img src="assets/players/3.png"
-                            class="img-responsive">
-                    </label></div>
+                    <div class="col-md-1"><label>
+                            <input type="radio" name="players" value="3" id="3p" class="hiddenradio players"><img
+                                src="assets/players/3.png" class="img-responsive">
+                        </label></div>
 
-                <div class="col-md-1"><label>
+                    <div class="col-md-1"><label>
 
-                        <input type="radio" name="players" value="4" id="4p" class="hiddenradio players"><img src="assets/players/4.png"
-                            class="img-responsive">
-                    </label></div>
+                            <input type="radio" name="players" value="4" id="4p" class="hiddenradio players"><img
+                                src="assets/players/4.png" class="img-responsive">
+                        </label></div>
 
-                <div class="col-md-1"><label>
+                    <div class="col-md-1"><label>
 
-                        <input type="radio" name="players" value="5" id="5p" class="hiddenradio players"><img src="assets/players/5.png"
-                            class="img-responsive">
-                    </label></div>
+                            <input type="radio" name="players" value="5" id="5p" class="hiddenradio players"><img
+                                src="assets/players/5.png" class="img-responsive">
+                        </label></div>
 
-                <div class="col-md-1"><label>
+                    <div class="col-md-1"><label>
 
 
-                        <input type="radio" name="players" value="6" id="6p" class="hiddenradio players"><img src="assets/players/6.png"
-                            class="img-responsive">
-                    </label></div>
+                            <input type="radio" name="players" value="6" id="6p" class="hiddenradio players"><img
+                                src="assets/players/6.png" class="img-responsive">
+                        </label></div>
 
-                <div class="col-md-1"><label>
+                    <div class="col-md-1"><label>
 
-                        <input type="radio" name="players" value="7" id="7p" class="hiddenradio players"><img src="assets/players/7.png"
-                            class="img-responsive">
-                    </label></div>
+                            <input type="radio" name="players" value="7" id="7p" class="hiddenradio players"><img
+                                src="assets/players/7.png" class="img-responsive">
+                        </label></div>
 
-                <div class="col-md-1"><label>
+                    <div class="col-md-1"><label>
 
-                        <input type="radio" name="players" value="8" id="8p" class="hiddenradio players"><img src="assets/players/8.png"
-                            class="img-responsive">
-                    </label></div>
-            </div>
-
-        </label>
-
-        <label for="radio" id="map-templates">Template:
-            <div class="row">
-                <div class="col-xs-3">
-                    <label class="hidden" id="template-1">
-                        <input type="radio" name="templates" value="template1" id="template1" class="hiddenradio templates"><img
-                            src="assets/templates/nucleus.png" class="img-responsive">
-                    </label>
-                </div>
-            </div>
-        </label> <br>
-
-        <label id="map-type">Type of map:
-            <div class="row">
-                <div class="col-xs-4">
-                    <label>
-                        <button type="button" class="btn btn-primary" name="maptypes" value="random" id="random" onclick="generateString(this)" disabled>Random
-                    </label>
+                            <input type="radio" name="players" value="8" id="8p" class="hiddenradio players"><img
+                                src="assets/players/8.png" class="img-responsive">
+                        </label></div>
                 </div>
 
-                <div class="col-xs-4">
-                    <label>
-                        <button type="button" class="btn btn-primary" name="maptypes" value="balanced" id="balanced" onclick="generateString(this)" disabled>Balanced
-                    </label>
-                </div>
+            </label>
 
-                <div class="col-xs-4">
-                    <label>
-                        <button type="button" class="btn btn-primary" name="maptypes" value="conflictive" id="conflictive" onclick="generateString(this)" disabled>Conflictive
-                    </label>
+            <label for="radio" id="map-templates">Template:
+                <div class="row">
+                    <div class="col-xs-3">
+                        <label class="hidden" id="template-1">
+                            <input type="radio" name="templates" value="template1" id="template1"
+                                class="hiddenradio templates"><img src="assets/templates/nucleus.png"
+                                class="img-responsive">
+                        </label>
+                    </div>
                 </div>
-            </div>
-        </label>
-        <div id="finalString">This is your string</div>
-    </form>
-</div>
+            </label> <br>
+
+            <label id="map-type">Type of map:
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>
+                            <button type="button" class="btn btn-primary" name="maptypes" value="random" id="random"
+                                onclick="generateString(this)" disabled>Random
+                        </label>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <label>
+                            <button type="button" class="btn btn-info" name="maptypes" value="balanced" id="balanced"
+                                onclick="generateString(this)" disabled>Balanced
+                        </label>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <label>
+                            <button type="button" class="btn btn-danger" name="maptypes" value="conflictive"
+                                id="conflictive" onclick="generateString(this)" disabled>Conflictive
+                        </label>
+                    </div>
+                </div>
+            </label>
+            <div id="finalString">This is your string</div>
+            <label>
+                <a href="https://keeganw.github.io/ti4/?settings=T60007837FFF&tiles=18,61,27,33,64,71,36,37,20,62,29,19,32,28,63,26,72,69,24,0,46,45,0,47,80,0,39,77,0,43,42,0,48,44,0,78,50" class="btn btn-success" target="_blank">To the map</a>
+            </label>
+        </form>
+    </div>
 </body>
 
 </html>
