@@ -21,16 +21,7 @@ $(document).ready(function(){
 
  function readJson(url){
     let obj=[];
-    //const response= 
-    fetch(url).then(response=> response.json()).then(data=> obj.push(data)); //.then(data => console.log(data));
-    //const obj= response.items;
-    //console.log("a ver el obj");
-    //console.log(obj);
-    //obj.forEach(console.log);
-    //let eing=JSON.parse(obj);
-    //console.log(eing);
-    //return fetch(url).then(response=>{return response.json()});
-    //return JSON.parse(fetch(url).then(response=>{return response.json()}));
+    fetch(url).then(response=> response.json()).then(data=> obj.push(data));
     return obj;
 }
 
@@ -81,23 +72,21 @@ let map=objectToMap(template);
 
 let R=[], B=[], B1=[], B2=[], B3=[];
 
-//let providers = readJson('./assets/providers.json');
+let solveproviders=providers[0];
 
-providers=providers[0];
-
-R=providers.R;
+R=solveproviders.R;
 
 shuffle(R);
 
 if(template.Random){
-    B=providers.B;
+    B=solveproviders.B;
     shuffle(B);
 }else{
-    B1=providers.B1;
+    B1=solveproviders.B1;
     shuffle(B1);
-    B2=providers.B2;
+    B2=solveproviders.B2;
     shuffle(B2);
-    B3=providers.B3;
+    B3=solveproviders.B3;
     shuffle(B3);
 }
 
@@ -130,8 +119,6 @@ if(value=="R"){
 return map;
 
 }
-/*let testmap=solve(mydata.R6Nucleus);
-console.log(keeganString(testmap));*/
 
 function generateString(e){
     let myString="";
@@ -151,20 +138,10 @@ function generateString(e){
         myString+="6Nucleus"
     }
 
-    //alert("2h");
-    //let mydata2 = readJson('./assets/templates.json');
-    //console.log(mydata2);
-    //console.log(mydata2[0]);
-
-    console.log(templates);
-    //console.log(providers);
-    //console.log(templates["R6Nucleus"]);
-    console.log(templates[0]);
-    //console.log(templates[0].R6Nucleus);
-
-    let map=solve(templates[0].R6Nucleus);
+    
+    let tempmap=objectToMap(templates[0]);
+    let map=solve(tempmap.get(myString));
     console.log(map);
-    //alert("fin ejecucion");
     alert(keeganString(map));
     document.getElementById("finalString").innerHTML=myString;
 
