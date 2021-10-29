@@ -8,7 +8,12 @@ $(document).ready(function(){
         $("#template-1").removeClass("hidden");
       }
 
-      if ($("#template1").is(':checked'))
+      else if($("#2p").is(':checked'))
+      {
+        $("#template-2").removeClass("hidden");
+      }
+
+      if ($(".templates").is(':checked'))
       {
         $(".btn").attr("disabled",false);
 
@@ -62,7 +67,7 @@ function shuffle(array) {
 function removeElement(arr,val){
     let index=arr.indexOf(val);
     if(index!=-1){
-        arr.splice(index);
+        arr.splice(index, 1);
     }
 }
 
@@ -90,7 +95,12 @@ if(template.Random){
     shuffle(B3);
 }
 
+alert(R);
+
 let blockedTiles=map.get("BlockedTiles");
+
+alert(blockedTiles);
+
 for(var i=0;i<=blockedTiles.length;i++){
     removeElement(R,blockedTiles[i]);
     removeElement(B,blockedTiles[i]);
@@ -99,6 +109,8 @@ for(var i=0;i<=blockedTiles.length;i++){
     removeElement(B3,blockedTiles[i]);
 
 }
+
+alert(R);
 
 for(i=1;i<=template.Size;i++){
 let key=i.toString();
@@ -135,7 +147,11 @@ function generateString(e){
     }
 
     if($("#template1").is(':checked')){
-        myString+="6Nucleus"
+        myString+="6Nucleus";
+    }
+
+    else if($("#template2").is(':checked')){
+        myString+="2Princess";
     }
 
     
