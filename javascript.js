@@ -3,14 +3,41 @@ var providers;
 
 $(document).ready(function(){
     $('input[type="radio"]').click(function(){
-      if ($("#6p").is(':checked'))
+        $(".template").addClass("hidden");
+
+      if ($("#2p").is(':checked'))
       {
-        $("#template-1").removeClass("hidden");
+        $(".2ptemplate").removeClass("hidden");
       }
 
-      else if($("#2p").is(':checked'))
+      else if($("#3p").is(':checked'))
       {
-        $("#template-2").removeClass("hidden");
+        $(".3ptemplate").removeClass("hidden");
+      }
+
+      else if($("#4p").is(':checked'))
+      {
+        $(".4ptemplate").removeClass("hidden");
+      }
+
+      else if($("#5p").is(':checked'))
+      {
+        $(".5ptemplate").removeClass("hidden");
+      }
+
+      else if($("#6p").is(':checked'))
+      {
+        $(".6ptemplate").removeClass("hidden");
+      }
+
+      else if($("#7p").is(':checked'))
+      {
+        $(".7ptemplate").removeClass("hidden");
+      }
+
+      else if($("#8p").is(':checked'))
+      {
+        $(".8ptemplate").removeClass("hidden");
       }
 
       if ($(".templates").is(':checked'))
@@ -140,12 +167,32 @@ function generateString(e){
         myString+="C";
     }
 
-    if($("#template1").is(':checked')){
+    if($("#2Princess").is(':checked')){
+        myString+="2Princess";
+    }
+
+    else if($("#3Limes").is(':checked')){
+        myString+="3Limes";
+    }
+
+    else if($("#4Gladio").is(':checked')){
+        myString+="4Gladio";
+    }
+
+    else if($("#5Aracne").is(':checked')){
+        myString+="5Aracne";
+    }
+
+    else if($("#6Nucleus").is(':checked')){
         myString+="6Nucleus";
     }
 
-    else if($("#template2").is(':checked')){
-        myString+="2Princess";
+    else if($("#7Centrum").is(':checked')){
+        myString+="7Centrum";
+    }
+
+    else if($("#8CentrumAnilla").is(':checked')){
+        myString+="8CentrumAnilla";
     }
 
     
