@@ -167,8 +167,8 @@ function generateString(e){
         myString+="C";
     }
 
-    if($("#2Princess").is(':checked')){
-        myString+="2Princess";
+    if($("#2Regina").is(':checked')){
+        myString+="2Regina";
     }
 
     else if($("#3Limes").is(':checked')){
