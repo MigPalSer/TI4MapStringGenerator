@@ -91,6 +91,16 @@ function shuffle(array) {
     return array;
   }
 
+  function copyAndShuffle(array){
+      let copiedArray=[];
+
+      for(var i=0;i<array.length;i++){
+          copiedArray.push(array[i]);
+      }
+
+      return shuffle(copiedArray);
+  }
+
 function removeElement(arr,val){
     let index=arr.indexOf(val);
     if(index!=-1){
@@ -106,20 +116,20 @@ let R=[], B=[], B1=[], B2=[], B3=[];
 
 let solveproviders=providers[0];
 
-R=solveproviders.R;
+R=copyAndShuffle(solveproviders.R);
 
-shuffle(R);
+//shuffle(R);
 
 if(template.Random){
-    B=solveproviders.B;
-    shuffle(B);
+    B=copyAndShuffle(solveproviders.B);
+    //shuffle(B);
 }else{
-    B1=solveproviders.B1;
-    shuffle(B1);
-    B2=solveproviders.B2;
-    shuffle(B2);
-    B3=solveproviders.B3;
-    shuffle(B3);
+    B1=copyAndShuffle(solveproviders.B1);
+    //shuffle(B1);
+    B2=copyAndShuffle(solveproviders.B2);
+    //shuffle(B2);
+    B3=copyAndShuffle(solveproviders.B3);
+    //shuffle(B3);
 }
 
 let blockedTiles=map.get("BlockedTiles");
