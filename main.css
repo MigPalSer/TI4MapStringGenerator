@@ -58,3 +58,7 @@ a:hover{
 figcaption{
     text-align: center;
 }
+
+#finalString{
+    overflow-wrap: break-word;
+}
