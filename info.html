@@ -1,30 +1,73 @@
+<!DOCTYPE html>
+<html>
 
-What is this?
+<head>
+    <meta charset="UTF-8">
+    <title>TI4 Map String Generator Info</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css">
 
-This is a non-profitable map generator for the tabletop game Twilight Imperium 4. 
-We give you different templates, you select the generation mode, our algorythm generate a map string and, finally, we offer you a link to the keeganw (***include link) map generator (whose front-end is awesome to us) to visualice and the string for TTS.
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Space+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
 
-How the algorythm works?
- We link templates (distributions of the map) with modes (random, balanced and conflictive); each of those combinations is a template object with fix hexagons (for example, usually Mecatol Rex at center) and variable hexagons of certain type (blue or red hexagons).
-We use some "providers" of hexagons, you can imagine as a pile of hexagons of a certain type shuffled, and the process consists in iterate the template and fill the variable hexagon places with hexagons of the providers. 
+<script src="https://use.fontawesome.com/c0d5ba0f3d.js"></script>
 
-Which is the difference for Random, Balanced and Conflictive?
 
-All the three modes use the same basic structure of the map (with certain hexagons in fix places and red and blue positions) but they differ in the way they complete the blue positions.
-Random mode shuffle all the unused blue hexagons and distribute randomly, which causes more unbalanced maps. For the other two modes, we divide the blue hexagons in three sets in function of their quality (resources, influence, tech...) and asign a certain set to each tile of the template.
-The balanced mode uses a distribution with the most valuable systems in close positions to the home systems and place less value hexagons in the disputated areas.
-Conflictive mode is the opposite; in conflictive templates we place the most value systems in the disputed areas and left the less value ones to the peaceful zones.
-Both modes create more balanced maps than random but differ in the incentives of conflict.
+</head>
 
-How do you evaluate systems?
+<body>
+    <div id="infodiv" class="col-xs-10 white-rectangle">
+        <div id="to-index"><a href="index.html"><i class="fa fa-arrow-circle-left fa-lg"></i><p>  To index</p></a></div>
+        <h2>What is this?</h2>
 
-We use three tiers of blue systems, B1 the lowest, B2 and B3 the best. To assign the systems, we give they points by this criteria:
--We sum all the primary values (the biggest between resources and influence) of planets in this system as points. This is the main value of system.
--We add 1 point for each 3 points of secondary values (the lowest between resources and influence). For reward the versatility.
--We add 1 point for each tech speciality.
--We add 1 point to the three planets systems. More valuable for achieving objectives.
--The legendary planets systems, Primor and Hope's End, are automatically assigned to the top tier B3.
-Systems with 2 or 3 points are B1, with 4 or 5 are B2 and with 6 or more are B3.
+    <p>This is a non-profitable map generator for the tabletop game Twilight Imperium 4.<br/>
+        We give you different templates, you select the generation mode, our algorythm generates a map string and,
+        finally, we offer you a link to the keeganw (***include link) map generator (whose front-end is awesome for us)
+        to visualize and the string for TTS.
+    </p>
 
-I have a perfect idea/suggestion/template...
- Contact us at crepusculum_concilia@protonmail.com
+    <h2>How does the algorythm work?</h2>
+    <p>We link templates (distributions of the map) with modes (random, balanced and conflictive); each of those
+        combinations is a template object with fixed hexagons (for example, usually Mecatol Rex at center) and variable
+        hexagons of certain type (blue or red hexagons).<br/>
+        We use some "providers" of hexagons, you can imagine as a pile of hexagons of a certain type shuffled, and the
+        process consists in iterating the template and filling the variable hexagon places with hexagons from the
+        providers. </p>
+
+    <h2>Which is the difference between Random, Balanced and Conflictive?</h2>
+    <p>All the three modes use the same basic structure of the map (with certain hexagons in fixed places and red and
+        blue positions) but they differ in the way they complete the blue positions.<br/>
+        Random mode shuffle all the unused blue hexagons and distribute randomly, which causes more unbalanced maps. For
+        the other two modes, we divide the blue hexagons in three sets in function of their quality (resources,
+        influence, tech...) and asign a certain set to each tile of the template.<br/>
+        The balanced mode uses a distribution with the most valuable systems in positions close to the home systems and
+        places less value hexagons in the disputed areas.<br/>
+        Conflictive mode is the opposite; in conflictive templates we place the most valuable systems in the disputed
+        areas and leave the less valuable ones to the peaceful zones.<br/>
+        Both modes create more balanced maps than random but differ in the incentives of conflict.
+    </p>
+
+    <h2>How do you evaluate systems?</h2>
+
+    <p>We use three tiers of blue systems: B1 the lowest, B2 and B3 the best. To assign the systems, we give them points
+        following this criteria:</p>
+    <ul>
+        <li>We sum all the primary values (the biggest between resources and influence) of planets in this system as
+            points. This is the main value of system.</li>
+        <li>We add 1 point for each 3 points of secondary values (the lowest between resources and influence). For
+            reward the versatility.</li>
+        <li>We add 1 point for each tech speciality.</li>
+        <li>We add 1 point to the three planets systems. More valuable for achieving objectives.</li>
+        <li>The legendary planets systems, Primor and Hope's End, are automatically assigned to the top tier B3.</li>
+        <li> Systems with 2 or 3 points are B1, with 4 or 5 are B2 and with 6 or more are B3.</li>
+    </ul>
+
+<h2>I have a perfect idea/suggestion/template...</h2>
+    <p>Contact us at crepusculum_concilia@protonmail.com</p>
+</div>
+</body>
+
+</html>

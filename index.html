@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="main.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Space+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
     </style>
 
+    <script src="https://use.fontawesome.com/c0d5ba0f3d.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/templates.json"></script>
     <script type="text/javascript" src="./assets/providers.json"></script>
@@ -23,6 +26,7 @@
 <body>
     <div class="container-fluid">
         <form id="ti-form" name="ti-form" class="col-xs-10 white-rectangle">
+            <div id="to-info"><a href="info.html" target="_blank"><p>To info page  </p><i class="fa fa-info-circle fa-lg"></i></a></div>
             <label for="radio" id="n-players">Number of players:
                 <div class="row seven-cols">
                     <div class="col-md-1"><label>
@@ -130,110 +134,118 @@
                     </div>
                 </div>
 
-    <div class="row three-cols" id="4ptemplates">
-        <div class="col-md-3">
-            <label class="hidden template 4ptemplate" id="template4Gladio">
-                <input type="radio" name="templates" value="4Gladio" id="4Gladio" class="hiddenradio templates"><img
-                    src="assets/templates/4Gladio.png" class="img-responsive">
-                <figcaption>Gladio</figcaption>
+                <div class="row three-cols" id="4ptemplates">
+                    <div class="col-md-3">
+                        <label class="hidden template 4ptemplate" id="template4Gladio">
+                            <input type="radio" name="templates" value="4Gladio" id="4Gladio"
+                                class="hiddenradio templates"><img src="assets/templates/4Gladio.png"
+                                class="img-responsive">
+                            <figcaption>Gladio</figcaption>
+                        </label>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="hidden template 4ptemplate" id="template4GladioII">
+                            <input type="radio" name="templates" value="4GladioII" id="4GladioII"
+                                class="hiddenradio templates"><img src="assets/templates/4GladioII.png"
+                                class="img-responsive">
+                            <figcaption>Gladio II</figcaption>
+                        </label>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="hidden template 4ptemplate" id="template4Thronus">
+                            <input type="radio" name="templates" value="4Thronus" id="4Thronus"
+                                class="hiddenradio templates"><img src="assets/templates/4Thronus.png"
+                                class="img-responsive">
+                            <figcaption>Thronus</figcaption>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row three-cols" id="5ptemplates">
+                    <div class="col-md-3">
+                        <label class="hidden template 5ptemplate" id="template5Aracne">
+                            <input type="radio" name="templates" value="5Aracne" id="5Aracne"
+                                class="hiddenradio templates"><img src="assets/templates/5Aracne.png"
+                                class="img-responsive">
+                            <figcaption>Aracne</figcaption>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row three-cols" id="6ptemplates">
+                    <div class="col-md-3">
+                        <label class="hidden template 6ptemplate" id="template6Nucleus">
+                            <input type="radio" name="templates" value="6Nucleus" id="6Nucleus"
+                                class="hiddenradio templates"><img src="assets/templates/6Nucleus.png"
+                                class="img-responsive">
+                            <figcaption>Nucleus</figcaption>
+                        </label>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="hidden template 6ptemplate" id="template6Oculum">
+                            <input type="radio" name="templates" value="6Oculum" id="6Oculum"
+                                class="hiddenradio templates"><img src="assets/templates/6Oculum.png"
+                                class="img-responsive">
+                            <figcaption>Oculum</figcaption>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row three-cols" id="7ptemplates">
+                    <div class="col-md-3">
+                        <label class="hidden template 7ptemplate" id="template7Centrum">
+                            <input type="radio" name="templates" value="7Centrum" id="7Centrum"
+                                class="hiddenradio templates"><img src="assets/templates/7Centrum.png"
+                                class="img-responsive">
+                            <figcaption>Centrum</figcaption>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row three-cols" id="8ptemplates">
+                    <div class="col-md-3">
+                        <label class="hidden template 8ptemplate" id="template8CentrumAnilla">
+                            <input type="radio" name="templates" value="8CentrumAnilla" id="8CentrumAnilla"
+                                class="hiddenradio templates"><img src="assets/templates/8CentrumAnilla.png"
+                                class="img-responsive">
+                            <figcaption>Centrum Anilla</figcaption>
+                        </label>
+                    </div>
+                </div>
+            </label> <br>
+
+            <label id="map-type">Type of map:
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>
+                            <button type="button" class="btn btn-primary" name="maptypes" value="random" id="random"
+                                onclick="generateString(this)" disabled>Random
+                        </label>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <label>
+                            <button type="button" class="btn btn-info" name="maptypes" value="balanced" id="balanced"
+                                onclick="generateString(this)" disabled>Balanced
+                        </label>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <label>
+                            <button type="button" class="btn btn-danger" name="maptypes" value="conflictive"
+                                id="conflictive" onclick="generateString(this)" disabled>Conflictive
+                        </label>
+                    </div>
+                </div>
             </label>
-        </div>
-
-        <div class="col-md-3">
-            <label class="hidden template 4ptemplate" id="template4GladioII">
-                <input type="radio" name="templates" value="4GladioII" id="4GladioII" class="hiddenradio templates"><img
-                    src="assets/templates/4GladioII.png" class="img-responsive">
-                <figcaption>Gladio II</figcaption>
+            <div id="finalString">Map sequence</div><br />
+            <label>
+                <a href="#" class="btn btn-success" target="_blank" id="mapbutton">To the map</a>
             </label>
-        </div>
-
-        <div class="col-md-3">
-            <label class="hidden template 4ptemplate" id="template4Thronus">
-                <input type="radio" name="templates" value="4Thronus" id="4Thronus" class="hiddenradio templates"><img
-                    src="assets/templates/4Thronus.png" class="img-responsive">
-                <figcaption>Thronus</figcaption>
-            </label>
-        </div>
-    </div>
-
-    <div class="row three-cols" id="5ptemplates">
-        <div class="col-md-3">
-            <label class="hidden template 5ptemplate" id="template5Aracne">
-                <input type="radio" name="templates" value="5Aracne" id="5Aracne" class="hiddenradio templates"><img
-                    src="assets/templates/5Aracne.png" class="img-responsive">
-                <figcaption>Aracne</figcaption>
-            </label>
-        </div>
-    </div>
-
-    <div class="row three-cols" id="6ptemplates">
-        <div class="col-md-3">
-            <label class="hidden template 6ptemplate" id="template6Nucleus">
-                <input type="radio" name="templates" value="6Nucleus" id="6Nucleus" class="hiddenradio templates"><img
-                    src="assets/templates/6Nucleus.png" class="img-responsive">
-                <figcaption>Nucleus</figcaption>
-            </label>
-        </div>
-
-        <div class="col-md-3">
-            <label class="hidden template 6ptemplate" id="template6Oculum">
-                <input type="radio" name="templates" value="6Oculum" id="6Oculum" class="hiddenradio templates"><img
-                    src="assets/templates/6Oculum.png" class="img-responsive">
-                <figcaption>Oculum</figcaption>
-            </label>
-        </div>
-    </div>
-
-        <div class="row three-cols" id="7ptemplates">
-            <div class="col-md-3">
-                <label class="hidden template 7ptemplate" id="template7Centrum">
-                    <input type="radio" name="templates" value="7Centrum" id="7Centrum"
-                        class="hiddenradio templates"><img src="assets/templates/7Centrum.png" class="img-responsive">
-                    <figcaption>Centrum</figcaption>
-                </label>
-            </div>
-        </div>
-
-    <div class="row three-cols" id="8ptemplates">
-        <div class="col-md-3">
-            <label class="hidden template 8ptemplate" id="template8CentrumAnilla">
-                <input type="radio" name="templates" value="8CentrumAnilla" id="8CentrumAnilla"
-                    class="hiddenradio templates"><img src="assets/templates/8CentrumAnilla.png" class="img-responsive">
-                <figcaption>Centrum Anilla</figcaption>
-            </label>
-        </div>
-    </div>
-    </label> <br>
-
-    <label id="map-type">Type of map:
-        <div class="row">
-            <div class="col-xs-4">
-                <label>
-                    <button type="button" class="btn btn-primary" name="maptypes" value="random" id="random"
-                        onclick="generateString(this)" disabled>Random
-                </label>
-            </div>
-
-            <div class="col-xs-4">
-                <label>
-                    <button type="button" class="btn btn-info" name="maptypes" value="balanced" id="balanced"
-                        onclick="generateString(this)" disabled>Balanced
-                </label>
-            </div>
-
-            <div class="col-xs-4">
-                <label>
-                    <button type="button" class="btn btn-danger" name="maptypes" value="conflictive" id="conflictive"
-                        onclick="generateString(this)" disabled>Conflictive
-                </label>
-            </div>
-        </div>
-    </label>
-    <div id="finalString">Map sequence</div><br/>
-    <label>
-        <a href="#" class="btn btn-success" target="_blank" id="mapbutton">To the map</a>
-    </label>
-    </form>
+        </form>
     </div>
 </body>
 

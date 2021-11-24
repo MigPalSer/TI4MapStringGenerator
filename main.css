@@ -1,5 +1,5 @@
 body{
-    background: url(assets/bg.jpg) center;
+    background: url(assets/bg.jpg) center no-repeat;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.5em;
 }
@@ -11,6 +11,25 @@ body{
     padding: 1vw;
     border-radius: 1%;
     opacity: 95%;
+}
+
+#to-info{
+    text-align: right;
+}
+
+#to-info p{
+    display: inline;
+    visibility: hidden;
+}
+
+#to-info:hover p{
+    visibility: visible;
+}
+
+#to-info a{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 .hiddenradio{
@@ -61,4 +80,26 @@ figcaption{
 
 #finalString{
     overflow-wrap: break-word;
+}
+
+#infodiv h2{
+    font-size: 1.3em;
+}
+
+#infodiv p, li{
+    font-family: 'Poppins', sans-serif;
+}
+
+#to-index p{
+    display: inline;
+    visibility: hidden;
+}
+
+#to-index:hover p{
+    visibility: visible;
+}
+
+#to-index a{
+    color: black;
+    text-decoration: none;
 }
