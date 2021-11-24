@@ -70,86 +70,170 @@
             </label>
 
             <label for="radio" id="map-templates">Template:
-                <div class="row">
-                    <div class="col-xs-3">
+                <div class="row three-cols" id="2ptemplates">
+                    <div class="col-md-3">
+                        <label class="hidden template 2ptemplate" id="template2Contessa">
+                            <input type="radio" name="templates" value="2Contessa" id="2Contessa"
+                                class="hiddenradio templates"><img src="assets/templates/2Contessa.png"
+                                class="img-responsive">
+                            <figcaption>Contessa</figcaption>
+                        </label>
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <label class="hidden template 2ptemplate" id="template2Marquesa">
+                            <input type="radio" name="templates" value="2Marquesa" id="2Marquesa"
+                                class="hiddenradio templates"><img src="assets/templates/2Marquesa.png"
+                                class="img-responsive">
+                            <figcaption>Marquesa</figcaption>
+                        </label>
+                    </div>
+
+                    <div class="col-md-3">
                         <label class="hidden template 2ptemplate" id="template2Regina">
                             <input type="radio" name="templates" value="2Regina" id="2Regina"
                                 class="hiddenradio templates"><img src="assets/templates/2Regina.png"
                                 class="img-responsive">
+                            <figcaption>Regina</figcaption>
                         </label>
 
+                    </div>
+                </div>
+
+                <div class="row three-cols" id="3ptemplates">
+                    <div class="col-md-3">
+                        <label class="hidden template 3ptemplate" id="template3Gladio">
+                            <input type="radio" name="templates" value="3Gladio" id="3Gladio"
+                                class="hiddenradio templates"><img src="assets/templates/3Gladio.png"
+                                class="img-responsive">
+                            <figcaption>Gladio</figcaption>
+                        </label>
+                    </div>
+
+                    <div class="col-md-3">
                         <label class="hidden template 3ptemplate" id="template3Limes">
                             <input type="radio" name="templates" value="3Limes" id="3Limes"
                                 class="hiddenradio templates"><img src="assets/templates/3Limes.png"
                                 class="img-responsive">
+                            <figcaption>Limes</figcaption>
                         </label>
+                    </div>
 
-                        <label class="hidden template 4ptemplate" id="template4Gladio">
-                            <input type="radio" name="templates" value="4Gladio" id="4Gladio"
-                                class="hiddenradio templates"><img src="assets/templates/4Gladio.png"
+                    <div class="col-md-3">
+                        <label class="hidden template 3ptemplate" id="template3Reticula">
+                            <input type="radio" name="templates" value="3Reticula" id="3Reticula"
+                                class="hiddenradio templates"><img src="assets/templates/3Reticula.png"
                                 class="img-responsive">
-                        </label>
-
-                        <label class="hidden template 5ptemplate" id="template5Aracne">
-                            <input type="radio" name="templates" value="5Aracne" id="5Aracne"
-                                class="hiddenradio templates"><img src="assets/templates/5Aracne.png"
-                                class="img-responsive">
+                            <figcaption>Reticula</figcaption>
                         </label>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-3">
-                        <label class="hidden template 6ptemplate" id="template6Nucleus">
-                            <input type="radio" name="templates" value="6Nucleus" id="6Nucleus"
-                                class="hiddenradio templates"><img src="assets/templates/6Nucleus.png"
-                                class="img-responsive">
-                        </label>
-
-                        <label class="hidden template 7ptemplate" id="template7Centrum">
-                            <input type="radio" name="templates" value="7Centrum" id="7Centrum"
-                                class="hiddenradio templates"><img src="assets/templates/7Centrum.png"
-                                class="img-responsive">
-                        </label>
-
-                        <label class="hidden template 8ptemplate" id="template8CentrumAnilla">
-                            <input type="radio" name="templates" value="8CentrumAnilla" id="8CentrumAnilla"
-                                class="hiddenradio templates"><img src="assets/templates/8CentrumAnilla.png"
-                                class="img-responsive">
-                        </label>
-                    </div>
-                </div>
-            </label> <br>
-
-            <label id="map-type">Type of map:
-                <div class="row">
-                    <div class="col-xs-4">
-                        <label>
-                            <button type="button" class="btn btn-primary" name="maptypes" value="random" id="random"
-                                onclick="generateString(this)" disabled>Random
-                        </label>
-                    </div>
-
-                    <div class="col-xs-4">
-                        <label>
-                            <button type="button" class="btn btn-info" name="maptypes" value="balanced" id="balanced"
-                                onclick="generateString(this)" disabled>Balanced
-                        </label>
-                    </div>
-
-                    <div class="col-xs-4">
-                        <label>
-                            <button type="button" class="btn btn-danger" name="maptypes" value="conflictive"
-                                id="conflictive" onclick="generateString(this)" disabled>Conflictive
-                        </label>
-                    </div>
-                </div>
+    <div class="row three-cols" id="4ptemplates">
+        <div class="col-md-3">
+            <label class="hidden template 4ptemplate" id="template4Gladio">
+                <input type="radio" name="templates" value="4Gladio" id="4Gladio" class="hiddenradio templates"><img
+                    src="assets/templates/4Gladio.png" class="img-responsive">
+                <figcaption>Gladio</figcaption>
             </label>
-            <div id="finalString">Map sequence</div>
-            <label>
-                <a href="#" class="btn btn-success" target="_blank" id="mapbutton">To the map</a>
+        </div>
+
+        <div class="col-md-3">
+            <label class="hidden template 4ptemplate" id="template4GladioII">
+                <input type="radio" name="templates" value="4GladioII" id="4GladioII" class="hiddenradio templates"><img
+                    src="assets/templates/4GladioII.png" class="img-responsive">
+                <figcaption>Gladio II</figcaption>
             </label>
-        </form>
+        </div>
+
+        <div class="col-md-3">
+            <label class="hidden template 4ptemplate" id="template4Thronus">
+                <input type="radio" name="templates" value="4Thronus" id="4Thronus" class="hiddenradio templates"><img
+                    src="assets/templates/4Thronus.png" class="img-responsive">
+                <figcaption>Thronus</figcaption>
+            </label>
+        </div>
+    </div>
+
+    <div class="row three-cols" id="5ptemplates">
+        <div class="col-md-3">
+            <label class="hidden template 5ptemplate" id="template5Aracne">
+                <input type="radio" name="templates" value="5Aracne" id="5Aracne" class="hiddenradio templates"><img
+                    src="assets/templates/5Aracne.png" class="img-responsive">
+                <figcaption>Aracne</figcaption>
+            </label>
+        </div>
+    </div>
+
+    <div class="row three-cols" id="6ptemplates">
+        <div class="col-md-3">
+            <label class="hidden template 6ptemplate" id="template6Nucleus">
+                <input type="radio" name="templates" value="6Nucleus" id="6Nucleus" class="hiddenradio templates"><img
+                    src="assets/templates/6Nucleus.png" class="img-responsive">
+                <figcaption>Nucleus</figcaption>
+            </label>
+        </div>
+
+        <div class="col-md-3">
+            <label class="hidden template 6ptemplate" id="template6Oculum">
+                <input type="radio" name="templates" value="6Oculum" id="6Oculum" class="hiddenradio templates"><img
+                    src="assets/templates/6Oculum.png" class="img-responsive">
+                <figcaption>Oculum</figcaption>
+            </label>
+        </div>
+    </div>
+
+        <div class="row three-cols" id="7ptemplates">
+            <div class="col-md-3">
+                <label class="hidden template 7ptemplate" id="template7Centrum">
+                    <input type="radio" name="templates" value="7Centrum" id="7Centrum"
+                        class="hiddenradio templates"><img src="assets/templates/7Centrum.png" class="img-responsive">
+                    <figcaption>Centrum</figcaption>
+                </label>
+            </div>
+        </div>
+
+    <div class="row three-cols" id="8ptemplates">
+        <div class="col-md-3">
+            <label class="hidden template 8ptemplate" id="template8CentrumAnilla">
+                <input type="radio" name="templates" value="8CentrumAnilla" id="8CentrumAnilla"
+                    class="hiddenradio templates"><img src="assets/templates/8CentrumAnilla.png" class="img-responsive">
+                <figcaption>Centrum Anilla</figcaption>
+            </label>
+        </div>
+    </div>
+    </label> <br>
+
+    <label id="map-type">Type of map:
+        <div class="row">
+            <div class="col-xs-4">
+                <label>
+                    <button type="button" class="btn btn-primary" name="maptypes" value="random" id="random"
+                        onclick="generateString(this)" disabled>Random
+                </label>
+            </div>
+
+            <div class="col-xs-4">
+                <label>
+                    <button type="button" class="btn btn-info" name="maptypes" value="balanced" id="balanced"
+                        onclick="generateString(this)" disabled>Balanced
+                </label>
+            </div>
+
+            <div class="col-xs-4">
+                <label>
+                    <button type="button" class="btn btn-danger" name="maptypes" value="conflictive" id="conflictive"
+                        onclick="generateString(this)" disabled>Conflictive
+                </label>
+            </div>
+        </div>
+    </label>
+    <div id="finalString">Map sequence</div>
+    <label>
+        <a href="#" class="btn btn-success" target="_blank" id="mapbutton">To the map</a>
+    </label>
+    </form>
     </div>
 </body>
 

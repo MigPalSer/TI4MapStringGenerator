@@ -39,10 +39,22 @@ body{
     width: 14.285714285714285714285714285714%;
 }
 
+.three-cols{
+    display: flex;
+}
+
+.col-md-3{
+    width: 30%;
+}
+
 a{
     color: white;
 }
 
 a:hover{
     color: white;
+}
+
+figcaption{
+    text-align: center;
 }
