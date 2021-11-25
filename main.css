@@ -13,6 +13,25 @@ body{
     opacity: 95%;
 }
 
+@media(max-width: 1100px){
+    #ti-form{
+        width: 100%;
+    }
+
+    .white-rectangle{
+        background-color: white;
+        margin: auto;
+        margin-top: 1vw;
+        padding: 1vw;
+        border-radius: 1%;
+        opacity: 90%;
+    }
+
+    img{
+        width: 1000vw;
+    }
+}
+
 #to-info{
     text-align: right;
 }
