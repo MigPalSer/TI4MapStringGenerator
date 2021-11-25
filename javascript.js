@@ -169,16 +169,40 @@ function generateString(e) {
         myString += "C";
     }
 
-    if ($("#2Regina").is(':checked')) {
+    if ($("#2Contessa").is(':checked')) {
+        myString += "2Contessa";
+    }
+
+    else if ($("#2Marquesa").is(':checked')) {
+        myString += "2Marquesa";
+    }
+
+    else if ($("#2Regina").is(':checked')) {
         myString += "2Regina";
+    }
+
+    else if ($("3Gladio").is(':checked')) {
+        myString += "3Gladio";
     }
 
     else if ($("#3Limes").is(':checked')) {
         myString += "3Limes";
     }
 
+    else if ($("#3Reticula").is(':checked')) {
+        myString += "3Reticula";
+    }
+
     else if ($("#4Gladio").is(':checked')) {
         myString += "4Gladio";
+    }
+
+    else if ($("#4GladioII").is(':checked')) {
+        myString += "4GladioII";
+    }
+
+    else if ($("#4Thronus").is(':checked')) {
+        myString += "4Thronus";
     }
 
     else if ($("#5Aracne").is(':checked')) {
@@ -187,6 +211,10 @@ function generateString(e) {
 
     else if ($("#6Nucleus").is(':checked')) {
         myString += "6Nucleus";
+    }
+
+    else if ($("#6Oculum").is(':checked')) {
+        myString += "6Oculum";
     }
 
     else if ($("#7Centrum").is(':checked')) {
