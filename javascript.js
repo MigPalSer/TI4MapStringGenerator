@@ -209,6 +209,10 @@ function generateString(e) {
         myString += "4Legens";
     }
 
+    else if ($("#4Scuta").is(':checked')) {
+        myString += "4Scuta";
+    }
+
     else if ($("#5Aracne").is(':checked')) {
         myString += "5Aracne";
     }
